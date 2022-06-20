@@ -11,9 +11,9 @@ imageLue = imageLue.convert("L")                             #On transforme l im
 imageLue = imageLue.filter(ImageFilter.FIND_EDGES)           #on applique un filtre , plusieurs filtres sont possibles ,celui ci permet de faire resortir beaucoup plus les contours
 
 #Pour plus d' info sur les filtres visiter ce site https://sites.google.com/magicmakers.fr/teen-python/jouer-avec-des-images/pil-filtres-et-effets
-# imageLue = imageLue.filter(ImageFilter.DETAIL)              
+# imageLue = imageLue.filter(ImageFilter.DETAIL)               # Un autre exemple de filtre
 # imageLue = imageLue.filter(ImageFilter.EDGE_ENHANCE_MORE)
-# imageLue  = ImageOps.invert(imageLue)
+
 
 imageLue.save('bmp.bmp','bmp')                                #on sauvegarde notre fichier bitmap
 os.system( "potrace  bmp.bmp --svg -o svg.svg -W 10cm -H 10cm")  # W pour la largeur et H pour la hauteur. Plus d' info en lisant le manuel de Potrace
